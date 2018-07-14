@@ -1,0 +1,8 @@
+﻿<div class="equipmentInventory">
+	<ul>
+		<li class="{{slot.name}}" *ngFor="let slot of slotList" >
+			<span>{{slot.displayName}}</span>
+			<app-icon [equipment]="character[slot.name]"></app-icon>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,106 @@
+﻿& {
+	border: 1px black solid;
+	@include checkBackground();
+
+	.equipmentInventory {
+		height: 330px;
+		margin-left:200px;
+		@include maplestoryWindow("EQUIPMENT INVENTORY");
+
+		& > ul {
+			list-style-type: none;
+			display: grid;
+			background-color: #FFF;
+			grid-template-rows: 40px;
+			grid-template-columns: 40px;
+			grid-gap: 3px;
+
+			& > li {
+				width: 40px;
+				height: 40px;
+				background-image: linear-gradient(0,#AAA 0,#AAA 50%,#666);
+				border-style: solid;
+				border-width: 1px;
+				border-color: #777 #999 #999 #777;
+				position: relative;
+
+				&.face {
+					grid-row: 1;
+					grid-column: 2;
+				}
+
+				&.cap {
+					grid-row: 1;
+					grid-column: 3;
+				}
+
+				&.hair {
+					grid-row: 2;
+					grid-column: 2;
+				}
+
+				&.foreHead {
+					grid-row: 2;
+					grid-column: 3;
+				}
+
+				&.eyeAccessory {
+					grid-row: 3;
+					grid-column: 3;
+				}
+
+				&.earAccessory {
+					grid-row: 3;
+					grid-column: 4;
+				}
+
+				&.weapon {
+					grid-row: 4;
+					grid-column: 2;
+				}
+
+				&.clothes {
+					grid-row: 4;
+					grid-column: 3;
+				}
+
+				&.subWeapon {
+					grid-row: 4;
+					grid-column: 5;
+				}
+
+				&.pants {
+					grid-row: 5;
+					grid-column: 3;
+				}
+
+				&.gloves {
+					grid-row: 5;
+					grid-column: 4;
+				}
+
+				&.cape {
+					grid-row: 5;
+					grid-column: 5;
+				}
+
+				&.shoes {
+					grid-row: 6;
+					grid-column: 3;
+				}
+
+				span {
+					color: #BBB;
+					display: block;
+					font-weight: bold;
+					font-size: 10px;
+					// Chromeでフォントサイズを10px未満にするため
+					transform:scale(0.8);
+					transform-origin:0 0;
+					line-height: 10px;
+					position: absolute;
+				}
+			}
+		}
+	}
+}

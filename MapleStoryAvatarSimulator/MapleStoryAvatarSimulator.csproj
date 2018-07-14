@@ -1,0 +1,99 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>6bb312f9-0f36-4958-8b6b-d7d5b8bc1f40</UserSecretsId>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Alt\js\**" />
+    <Compile Remove="wwwroot\lib\**" />
+    <Content Remove="Alt\js\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="Alt\js\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <None Remove="Alt\js\**" />
+    <None Remove="wwwroot\lib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.default.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Alt\ts\avatar-simulator\common.ts" />
+    <None Remove="Alt\ts\avatar-simulator\Display\Character\characterImage.ts" />
+    <None Remove="Alt\ts\avatar-simulator\Display\displayImage.ts" />
+    <None Remove="Alt\ts\avatar-simulator\Display\EquipmentInventory\equipmentInventory.component.ts" />
+    <None Remove="Alt\ts\avatar-simulator\icon.service.ts" />
+    <None Remove="Alt\ts\avatar-simulator\icon\icon.component.ts" />
+    <None Remove="Alt\ts\avatar-simulator\models\character.ts" />
+    <None Remove="Alt\ts\avatar-simulator\models\equipment.ts" />
+    <None Remove="Alt\ts\avatar-simulator\models\frame.ts" />
+    <None Remove="Alt\ts\avatar-simulator\models\smap.ts" />
+    <None Remove="Alt\ts\main.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Alt\scss\style.scss" />
+    <Content Include="Alt\ts\avatar-simulator\simulator.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MapleStoryDB\MapleStoryDB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\common.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\Display\Character\character.component.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\Display\Character\characterImage.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\icon\icon.component.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\models\frame.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\models\map.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\Display\display.component.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\models\image.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\Display\EquipmentInventory\equipmentInventory.component.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\ItemList\itemList.component.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\Display\Character\character.directive.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\Display\Character\character.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\models\equipment.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\models\smap.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\services\item.service.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\simulator.component.ts" />
+    <TypeScriptCompile Include="Alt\ts\avatar-simulator\simulator.module.ts" />
+    <TypeScriptCompile Include="Alt\ts\main.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.default.json" />
+    <None Include="wwwroot\templates\avatar-simulator\character.html" />
+    <None Include="wwwroot\templates\avatar-simulator\display.html" />
+    <None Include="wwwroot\templates\avatar-simulator\itemList.html" />
+    <None Include="wwwroot\templates\avatar-simulator\simulator.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+﻿<div class="icon" *ngIf="equipment" title="{{equipment.name}}({{equipment.id}})">
+	<div class="imageWrap" [style.top]="part.y + 'px'"
+			[style.left]="part.x + 'px'"
+			[style.z-index]="part.z"
+			*ngFor="let part of parts" >
+		<img src="https://storage.googleapis.com/maplestory-cloudstorage/Character/{{part.imagePath}}.png"/>
+	</div>
+</div>

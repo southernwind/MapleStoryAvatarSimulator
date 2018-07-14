@@ -1,0 +1,17 @@
+﻿
+.characterBody{
+	ul{
+		position:relative;
+		list-style-type:none;
+		padding:0;
+		top:100px;
+		left:100px;
+		li{
+			position:absolute;
+			font-size:0px;
+			img{
+				display:block;
+			}
+		}
+	}
+}

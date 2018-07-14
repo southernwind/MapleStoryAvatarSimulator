@@ -1,0 +1,9 @@
+﻿<div>
+	<div class="characterBody">
+		<ul>
+			<li *ngFor="let image of characterImage.parts" [style.top]="image.y + 'px'" [style.left]="image.x + 'px'" [style.z-index]="image.z">
+				<img src="https://storage.googleapis.com/maplestory-cloudstorage/Character/{{image.imagePath}}.png" />
+			</li>
+		</ul>
+	</div>
+</div>

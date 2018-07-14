@@ -1,0 +1,14 @@
+﻿<div class="equipmentTypes">
+	<ul>
+		<li class="itemCategory" *ngFor="let itemCategory of itemCategories" (click)="changeSelectedItemCategory(itemCategory)">
+			<span class="name">{{itemCategory.name}}</span><span class="count">{{itemCategory.count}}</span>
+		</li>
+	</ul>
+</div>
+<div id="itemList">
+	<ul>
+		<li class="item" *ngFor="let item of itemList" (click)="equip(item)">
+			<app-icon [equipment]="item"></app-icon>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,27 @@
+﻿@import "reboot";
+
+@import "mixin";
+
+#simulatorArea {
+	display: flex;
+	height:99vh;
+	width:100vw;
+	@import "avatar-simulator/avatar";
+
+
+	@import "avatar-simulator/common";
+
+	#itemListArea {
+		@import "avatar-simulator/itemList";
+	}
+
+	#actionsArea {
+		@import "avatar-simulator/actions";
+	}
+
+	#displayArea {
+		@import "avatar-simulator/display";
+	}
+
+	@import "avatar-simulator/_character.scss";
+}

@@ -1,0 +1,11 @@
+﻿<div id="simulatorArea">
+	<app-itemList id="itemListArea" (onEquip)="equip($event)"></app-itemList>
+	<app-display id="displayArea"></app-display>
+	<div id="actionsArea">
+		<ul id="actions">
+			<li class="action" *ngFor="let action of actions">
+				<span>{{action.name}}</span>
+			</li>
+		</ul>
+	</div>
+</div>
